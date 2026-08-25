@@ -1,0 +1,21 @@
+{
+  "_comment_1": "Merge these into ~/.claude/settings.json. Do not paste this file whole over yours - it would wipe everything else. Delete the _comment lines when you're done; JSON has no comments and these are only here to be read.",
+
+  "_comment_2": "1. Top level: set the model you actually run, so the hook can resolve your context-window size and show a percentage. Drop this and you still get a raw token count.",
+  "model": "claude-opus-5[1m]",
+
+  "_comment_3": "2. The hook itself. If you already have a hooks block with a UserPromptSubmit array, add ONLY the inner object below to that array. Fix the -File path to wherever you put the script. On macOS/Linux use pwsh instead of powershell.exe.",
+  "hooks": {
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"C:\\Users\\YOU\\.claude\\hooks\\context-tax-reminder.ps1\"",
+            "timeout": 5
+          }
+        ]
+      }
+    ]
+  }
+}
