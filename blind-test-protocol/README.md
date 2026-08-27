@@ -73,6 +73,8 @@ Add `-All` to print every field, not just the misses.
   differently.
 - `compare-truth.ps1` has no such dependency and will run anywhere PowerShell does.
 
+There are no additional packages to install on supported Windows systems.
+
 ## Things worth knowing
 
 - **Every run is different.** The values are re-randomized, so you can run it as many times
@@ -95,3 +97,8 @@ densities you choose.
 It says nothing about any particular vendor's implementation — their proxy code, their
 caching, their published benchmarks. Those need auditing separately, and if you haven't
 audited them, quote them as claims rather than repeating them as findings.
+
+## Remove it
+
+Delete the downloaded `blind-test-protocol` folder when you no longer need it. Test evidence is
+stored only in its `runs/` subfolder, so copy out any runs you want to retain first.

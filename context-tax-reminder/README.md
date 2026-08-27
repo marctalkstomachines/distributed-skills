@@ -108,6 +108,10 @@ as the next band.
 - **5-second timeout.** It reads only the last 1MB of the transcript, because real
   transcripts run to tens of megabytes and a full parse would blow the budget.
 
+The hook reads the current session transcript, reads your configured model name, writes a small
+per-session marker under its adjacent `state/` folder, and returns structured hook output. It
+does not modify the transcript, change models, or clear the session.
+
 ## If nothing appears
 
 Check, in order: the path in `settings.json` points at the real file · you started a **new**
@@ -120,3 +124,9 @@ session after editing settings · you're past your first prompt. Then run it by 
 
 It should print one line of JSON. If it prints nothing, it couldn't find a `usage` block in
 that transcript — which is the designed behavior, not a crash.
+
+## Uninstall
+
+Remove the matching `UserPromptSubmit` hook object from `~/.claude/settings.json`, then delete
+`context-tax-reminder.ps1` and its adjacent `state/` folder. Do not delete your entire hooks
+array or settings file; other tools may share them.
