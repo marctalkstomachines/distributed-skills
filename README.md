@@ -1,27 +1,31 @@
-# distributed-skills
+# workbench
 
 Tools I hand out in my videos — [Marc Talks to Machines](https://www.youtube.com/@marctalkstomachines).
 
 Each folder contains one self-contained artifact: a skill, agent, hook, or runnable utility.
 There is no package manager or universal installer because each artifact belongs in a different
-place. Choose one item below and follow its short README.
+place.
+
+**Hand the folder to your agent and let it do the install.** Every artifact's README opens with
+the exact text to paste — it points your agent at that folder, tells it to fit the thing to your
+machine rather than to the paths in the README, and to report back what it changed. Doing it by
+hand works too; the steps are in the same README.
 
 ## Pick one
 
-| Artifact | Type | Works with | Fastest installation |
+| Artifact | Type | Works with | Where it goes |
 |---|---|---|---|
-| [`organize-batch`](organize-batch/) | Skill | Claude Code; Codex-compatible | Claude: copy the folder to `~/.claude/skills/`. Codex: ask Codex to install the linked GitHub folder. |
-| [`repo-scout`](repo-scout/) | Agent | Claude Code | Download `repo-scout.md` into `~/.claude/agents/`. |
-| [`context-tax-reminder`](context-tax-reminder/) | Hook | Claude Code | Download the script, then merge the supplied hook entry into `settings.json`. |
-| [`blind-test-protocol`](blind-test-protocol/) | Windows utility | PowerShell 5.1 | Download the folder and run `render-dense.ps1`; nothing is installed. |
+| [`organize-batch`](organize-batch/) | Skill | Claude Code; Codex-compatible | `~/.claude/skills/` (Claude) or `~/.codex/skills/` (Codex) |
+| [`repo-scout`](repo-scout/) | Agent | Claude Code | `~/.claude/agents/` |
+| [`context-tax-reminder`](context-tax-reminder/) | Hook | Claude Code | `~/.claude/hooks/`, plus a merged entry in `settings.json` |
+| [`blind-test-protocol`](blind-test-protocol/) | Windows utility | PowerShell 5.1 | anywhere — nothing is installed |
 
 Windows uses `C:\Users\<you>\` wherever the table shows `~/`.
 
-## Download
+## If you’d rather do it by hand
 
-- **Everything:** [Download the repository as a ZIP](https://github.com/marctalkstomachines/distributed-skills/archive/refs/heads/main.zip), unzip it, then keep only the artifact you want.
+- **Everything:** [Download the repository as a ZIP](https://github.com/marctalkstomachines/workbench/archive/refs/heads/main.zip), unzip it, then keep only the artifact you want.
 - **One file:** open the artifact folder, select the file, and use GitHub's **Download raw file** button.
-- **Codex skill:** paste this into Codex: `Install the skill from https://github.com/marctalkstomachines/distributed-skills/tree/main/organize-batch`
 
 The individual READMEs contain exact destinations, setup steps, platform requirements, use
 examples, safety limits, and troubleshooting. Some artifacts require Claude Code or PowerShell;
@@ -31,8 +35,8 @@ there are no additional package dependencies unless that artifact's README says 
 
 | Artifact | Video |
 |---|---|
-| `organize-batch` | *3 Levels of Claude for People Who Don't Code* |
-| `repo-scout` | *I Gave Fable ONE Job. It Hired 7 Agents Instead.* |
+| `organize-batch` | *3 Levels of Claude for People Who Don't Write Code* |
+| `repo-scout` | *Everyone's Copying Fable's Agent Trick. Mine Just Lost a Race.* |
 | `context-tax-reminder` | *You Just Installed 10 Claude Skills. I Wrote One Rule.* |
 | `blind-test-protocol` | *You Just Installed 10 Claude Skills. I Wrote One Rule.* |
 

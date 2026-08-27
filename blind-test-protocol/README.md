@@ -24,6 +24,25 @@ A blind test can.
 
 ## Run it
 
+Hand it to your agent. Paste this:
+
+```text
+Run this for me on my own material: https://github.com/marctalkstomachines/workbench/tree/main/blind-test-protocol
+
+Read PROTOCOL.md there, then set it up on this machine and run it: render the
+pages, hand the images to the tool I'm evaluating, and diff what it reads back
+against the truth file. Don't show it the truth file, and don't show me the
+values before the diff.
+
+Then show me the misses, and tell me which ones the tool warned me about and
+which ones it got wrong silently.
+```
+
+That's the run. Everything below is what your agent reads to do it — and what you'd
+follow to do it yourself.
+
+### By hand
+
 ```powershell
 .\render-dense.ps1
 ```

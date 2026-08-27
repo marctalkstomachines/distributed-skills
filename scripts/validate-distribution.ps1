@@ -63,13 +63,13 @@ Get-ChildItem -LiteralPath $repo -Recurse -Filter '*.md' | ForEach-Object {
         Assert-True (Test-Path -LiteralPath $resolved) "Broken relative link in $($_.FullName): $target"
     }
 
-    foreach ($privatePath in 'C:\Users\Crucible', 'D:\brand', 'D:\distributed-skills') {
+    foreach ($privatePath in 'C:\Users\Crucible', 'D:\brand', 'D:\workbench') {
         Assert-True (-not $markdown.Contains($privatePath)) "Private absolute path in $($_.FullName): $privatePath"
     }
 }
 
 Write-Host 'Running blind-test utility smoke test...'
-$tempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("distributed-skills-" + [guid]::NewGuid())
+$tempRoot = Join-Path ([System.IO.Path]::GetTempPath()) ("workbench-" + [guid]::NewGuid())
 try {
     $runDir = Join-Path $tempRoot 'blind'
     & (Join-Path $repo 'blind-test-protocol/render-dense.ps1') -OutDir $runDir | Out-Host

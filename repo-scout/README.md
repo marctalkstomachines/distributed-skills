@@ -15,6 +15,24 @@ installs to a different folder than skills do.
 
 ## Install
 
+Hand it to your agent. Paste this:
+
+```text
+Install this for me: https://github.com/marctalkstomachines/workbench/tree/main/repo-scout
+
+Read the README there, then set it up on this machine: put the agent file where
+my agent will find it, for all my projects rather than just this one.
+
+Then spawn one against a repository here and show me the brief it comes back with.
+
+When you're done, tell me what you changed and what you left alone.
+```
+
+That's the install. Everything below is what your agent reads to do it — and what
+you'd follow to do it yourself.
+
+### By hand
+
 1. Download this repo: green **Code** button → **Download ZIP** → unzip.
 2. Copy `repo-scout.md` into your agents folder:
    - everywhere: `C:\Users\<you>\.claude\agents\` (Windows) or `~/.claude/agents/` (Mac/Linux)

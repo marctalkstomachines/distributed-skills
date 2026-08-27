@@ -22,7 +22,27 @@ you've watched it behave, run it on the real thing.
 | `brief.md` | the job's contract — the five sentences | **into the folder you're organizing** |
 | `conventions.md` | rules the job earns from your corrections | **into the folder you're organizing** |
 
-## Install (once)
+## Install
+
+Hand it to your agent. Paste this:
+
+```text
+Install this for me: https://github.com/marctalkstomachines/workbench/tree/main/organize-batch
+
+Read the README there, then set it up on this machine: put the skill where my
+agent will find it, and copy the brief and the conventions file into the folder
+I want organized. Ask me about that folder and fill the brief in from my answers.
+
+Point it at a copy of the folder first, not the original. Run the survey and
+show me the proposal before anything moves.
+
+When you're done, tell me what you changed and what you left alone.
+```
+
+That's the install. Everything below is what your agent reads to do it — and what
+you'd follow to do it yourself.
+
+### By hand
 
 1. You need Claude Code. Setup is one pasted line + one login:
    https://code.claude.com/docs/en/quickstart
@@ -34,7 +54,7 @@ you've watched it behave, run it on the real thing.
 **Using Codex instead?** Ask Codex:
 
 ```text
-Install the skill from https://github.com/marctalkstomachines/distributed-skills/tree/main/organize-batch
+Install the skill from https://github.com/marctalkstomachines/workbench/tree/main/organize-batch
 ```
 
 Codex installs it into `~/.codex/skills/organize-batch/`. Its invocation interface may differ
