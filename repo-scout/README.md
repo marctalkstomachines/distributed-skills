@@ -7,6 +7,12 @@ brief with every claim citing a file path. They inspect; they never modify.
 **This one is an agent, not a skill** — it's a role Claude Code can delegate to, and it
 installs to a different folder than skills do.
 
+## Requirements
+
+- Claude Code with subagents available.
+- Read access to the repository being surveyed.
+- No additional packages.
+
 ## Install
 
 1. Download this repo: green **Code** button → **Download ZIP** → unzip.
@@ -33,3 +39,14 @@ redundant, what supersedes what, what's secretly the same project. Each scout se
 own repo, so cross-repo conclusions were invisible to every scout. The file's own
 orchestrator contract covers this: scout briefs are testimony, not proof — verify any
 cross-repo claim against primary evidence before acting on it.
+
+## If Claude cannot find it
+
+Check that the file ends in `.md`, lives directly inside the global or project-level
+`.claude/agents/` folder, and retains the YAML frontmatter at the top. Start a new Claude Code
+session after installing it. The agent reads repositories but does not write files or state.
+
+## Uninstall
+
+Delete `repo-scout.md` from the global or project-level `.claude/agents/` folder where you
+installed it. It creates no state and changes no repository files.
