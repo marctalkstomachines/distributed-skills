@@ -41,6 +41,26 @@ window is.
 
 ## Install
 
+Hand it to your agent. Paste this:
+
+```text
+Install this for me: https://github.com/marctalkstomachines/workbench/tree/main/context-tax-reminder
+
+Read the README there, then set it up on this machine: put the files where they
+belong on my system and register the hook in my existing settings without
+overwriting anything already in it. The bands in that README are one person's
+numbers - ask me how I actually work and set them to fit me.
+
+Then start a new session and show me the line firing.
+
+When you're done, tell me what you changed and what you left alone.
+```
+
+That's the install. Everything below is what your agent reads to do it — and what
+you'd follow to do it yourself.
+
+### By hand
+
 **1.** Put `context-tax-reminder.ps1` anywhere. `~/.claude/hooks/` is the tidy choice.
 
 **2.** Register it as a `UserPromptSubmit` hook in `~/.claude/settings.json`. If you have no

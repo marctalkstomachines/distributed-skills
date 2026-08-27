@@ -16,8 +16,7 @@ Record exactly one primary type before creating files:
 | Utility | Runnable scripts and supporting documents | Any user-chosen folder | Download and run; do not call this an installed skill. |
 
 If an artifact mixes types, split it into separately installable folders unless the pieces cannot
-work independently. Never label a hook or utility as a skill merely because the repository is
-named `distributed-skills`.
+work independently. Never label a hook or utility as a skill; the type table above is the authority.
 
 ## 2. Package one complete folder
 
@@ -51,7 +50,7 @@ operating system API, or another runtime. Prefer: "No additional packages; requi
 ## 4. Provide the shortest honest install route
 
 - Link the whole-repository ZIP:
-  `https://github.com/marctalkstomachines/distributed-skills/archive/refs/heads/main.zip`.
+  `https://github.com/marctalkstomachines/workbench/archive/refs/heads/main.zip`.
 - For a single-file artifact, link its GitHub page so the user can choose **Download raw file**.
 - For a Codex-compatible skill, include a paste-ready request using the exact GitHub tree URL.
 - For Claude Code, state the exact manual destination. Do not promise a one-click installer that
