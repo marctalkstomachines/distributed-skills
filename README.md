@@ -35,7 +35,7 @@ there are no additional package dependencies unless that artifact's README says 
 
 | Artifact | Video |
 |---|---|
-| `organize-batch` | *3 Levels of Claude for People Who Don't Write Code* |
+| `organize-batch` | *3 Levels of Claude for People Who Don't Code* |
 | `repo-scout` | *Everyone's Copying Fable's Agent Trick. Mine Just Lost a Race.* |
 | `context-tax-reminder` | *You Just Installed 10 Claude Skills. I Wrote One Rule.* |
 | `blind-test-protocol` | *You Just Installed 10 Claude Skills. I Wrote One Rule.* |
